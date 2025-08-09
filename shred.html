@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shred Mode: Not your Therapist</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(125deg, #ae5e5e, #a72525);
+      color: #f2f2f2;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5em;
+      color: #ff4b5c;
+      text-shadow: 0 0 10px #e7ff4b;
+      margin-bottom: 0.5em;
+    }
+
+    textarea {
+      width: 80%;
+      height: 200px;
+      background-color: #121212;
+      border: 2px dashed #ff4b5c;
+      color: #f9f9f9;
+      font-size: 2em;
+      padding: 15px;
+      border-radius: 12px;
+      resize: none;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    textarea:focus {
+      border-color: #ffcc00;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    .shred-button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: rgb(221, 19, 19);
+      background: linear-gradient(to right, #de9da3, #ffcc00);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff4b5c;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      background-size: cover;
+    }
+
+    .shred-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff4b5c;
+    }
+
+    .emoji {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      color: #bbbbbb;
+      margin-bottom: 1em;
+      font-style: italic;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="emoji">🔥</div>
+  <h1>Welcome to Shred Mode
+    <span class="not-therapist"> : Not your Therapist</span>
+  </h1>
+  <div class="tagline">Type it. Let it burn. This screen doesn’t judge.</div>
+  
+
+  <textarea placeholder="Unload it here... your regrets, rage, or anything weird. We got space for all your heartbreaks."></textarea>
+
+  <button class="shred-button" onclick="shred()">SHRED IT 💥</button>
+
+<script>
+  function shred() {
+    const textarea = document.querySelector('textarea');
+    const audio = document.getElementById('shredAudio');
+    if (textarea.value.trim() === '') {
+      alert("Empty? Give yourself something to destroy.");
+    } else {
+      if (audio) {
+        audio.currentTime = 0; // rewind to start
+        audio.play(); // play audio
+      }
+      alert("🔥 Text shredded. Pain processed. Rage respected.");
+      textarea.value = '';
+    }
+  }
+</script>
+<audio id="shredAudio" src="c:\Users\Shibin Biju Mathew\Downloads\crosscut-paper-shredder-90518.mp3" preload="auto"></audio>
+
+</body>
+</html>

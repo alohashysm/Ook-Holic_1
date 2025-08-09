@@ -1,0 +1,103 @@
+/* Starry animated background */
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at bottom, #1b1b1b 0%, #000000 100%);
+  color: #f1f1f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Star particles */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent url('https://tse2.mm.bing.net/th/id/OIP.LTmyP2h-zrRGn8B2bXZfCQHaEo?rs=1&pid=ImgDetMain&o=7&rm=3.png') repeat;
+  z-index: 0;
+  animation: moveStars 50s linear infinite;
+  opacity: 1;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(40, 40, 40, 0.95);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #ffd70055;
+  text-align: center;
+  max-width: 90%;
+  width: 400px;
+  border: 1px solid #ffd70033;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.4em;
+  color: #ffd700;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px #ffd70055;
+}
+
+.tagline {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 22px;
+}
+
+input[type="text"] {
+  padding: 14px 18px;
+  width: 85%;
+  border: 2px solid #ffd70033;
+  border-radius: 12px;
+  font-size: 1em;
+  margin-bottom: 18px;
+  outline: none;
+  background: #1f1f1f;
+  color: #ffd700;
+}
+
+.ask-btn, .confess-btn, .voice-btn {
+  background-color: #ffd700;
+  border: none;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1b1b1b;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+.ask-btn:hover, .confess-btn:hover, .voice-btn:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ffd700aa;
+}
+
+.answer-box {
+  margin-top: 25px;
+  font-size: 1.2em;
+  color: #fff3cd;
+  font-weight: bold;
+  min-height: 50px;
+  padding: 10px;
+  word-wrap: break-word;
+  border-radius: 10px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid #ffd70044;
+}

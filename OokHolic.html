@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ook Holic</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Importing Pacifico font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Applying the font directly here -->
+    <h1 style="font-family: 'Pacifico', cursive;">Ooks La Vista</h1>
+    <p class="tagline">Ask me anything. But not about your girlfriend. It's a myth.</p>
+
+    <button class="confess-btn" onclick="toggleConfessionMode()">Toggle Confession Mode 💔</button>
+    <button class="voice-btn" onclick="toggleVoice()">Toggle Voice Mode 🎤</button>
+
+    <input type="text" id="question" placeholder="What's bothering your soul today?">
+    <button class="ask-btn" onclick="giveAnswer()">Get Answer</button>
+
+    <div id="answerBox" class="answer-box">🌀</div>
+    <div style="margin-top: 30px; text-align: center;">
+      <p style="font-weight: bold; font-size: 1.2em;">Feeling Really Dramatic and Angry?</p>
+      <a href="shred.html">
+        <button style="
+          background-color: crimson;
+          color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;">
+      Try Rage Mode 🔥
+    </button>
+  </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
